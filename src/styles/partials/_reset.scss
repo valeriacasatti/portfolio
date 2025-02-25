@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontMPlus2;
+  background-color: $darkBackgroundColor;
+  color: $darkTextColor;
+  font-weight: 300;
+  &::selection {
+    background-color: $darkPink;
+    color: $darkTextColor;
+  }
+  li {
+    list-style-type: none;
+  }
+  h1 {
+    background: $gradientText;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
