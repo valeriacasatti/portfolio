@@ -29,8 +29,7 @@
 .MuiPaper-root.MuiAppBar-root {
   --Paper-shadow: none !important;
   --Paper-overlay: none !important;
-  /* background-color: #00171f; */
-  padding: 3rem 2rem;
+  padding: 2rem 2rem 3rem 2rem;
 }
 
 /* logo */

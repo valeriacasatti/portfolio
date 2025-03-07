@@ -24,6 +24,7 @@ const Footer = () => {
       sx={{
         backgroundColor: "rgba(212, 39, 166, 0.05)",
         padding: "2rem 6rem",
+        marginTop: "3rem",
       }}
     >
       <Grid2 container>
