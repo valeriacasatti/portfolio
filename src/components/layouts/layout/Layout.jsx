@@ -15,6 +15,7 @@ const Layout = () => {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
+        transition: "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
       }}
     >
       <Navbar />
