@@ -19,8 +19,8 @@ const About = () => {
   };
 
   return (
-    <Box textAlign="center">
-      <Container maxWidth="md">
+    <Box textAlign="center" mt={5}>
+      <Container maxWidth="lg">
         <Typography variant="h2">About</Typography>
         <Typography variant="body1" mt={3}>
           Recent graduate as a Full Stack Web Developer from Coderhouse, I am
@@ -33,7 +33,7 @@ const About = () => {
       </Container>
 
       {/* contact info */}
-      <Box my={3} display="flex" justifyContent="center">
+      <Box my={4} display="flex" justifyContent="center">
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <Box display="flex" alignItems="center" mb={2}>
             <LocationOnIcon sx={{ color: pink600, marginRight: 1 }} />

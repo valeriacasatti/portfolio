@@ -8,7 +8,8 @@ import {
   ListItemText,
   Toolbar,
 } from "@mui/material";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-scroll";
+import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useTheme } from "../../context/useTheme";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,7 +18,7 @@ import "./navbar.css";
 
 const Navbar = () => {
   const { theme } = useTheme();
-  const location = useLocation(); // Obtiene la ruta actual
+  const location = useLocation();
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -26,11 +27,11 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/skills", label: "Skills" },
-    { to: "/projects", label: "Projects" },
-    { to: "/contact", label: "Contact" },
+    { to: "home", label: "Home" },
+    { to: "about", label: "About" },
+    { to: "skills", label: "Skills" },
+    { to: "projects", label: "Projects" },
+    { to: "contact", label: "Contact" },
   ];
 
   return (
@@ -51,6 +52,7 @@ const Navbar = () => {
         <Box component={Link} to="/">
           <img src={logo} alt="logo" />
         </Box>
+
         {/* desktop navbar */}
         <Box
           className="navbar-links"
@@ -60,12 +62,16 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
+              smooth={true}
+              duration={500}
               className={location.pathname === link.to ? "active" : ""}
+              style={{ cursor: "pointer" }}
             >
               {link.label}
             </Link>
           ))}
         </Box>
+
         {/* mobile menu button */}
         <IconButton
           onClick={handleDrawerToggle}
@@ -93,6 +99,8 @@ const Navbar = () => {
                 <ListItemText>
                   <Link
                     to={link.to}
+                    smooth={true}
+                    duration={500}
                     className={location.pathname === link.to ? "active" : ""}
                   >
                     {link.label}

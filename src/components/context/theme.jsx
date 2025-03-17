@@ -20,8 +20,11 @@ export const lightTheme = createTheme({
       fontSize: "1rem",
     },
     body2: {
-      fontWeight: 100,
+      fontWeight: 200,
       fontSize: "0.8rem",
+    },
+    caption: {
+      fontWeight: 200,
     },
   },
   palette: {
@@ -58,8 +61,11 @@ export const darkTheme = createTheme({
       fontSize: "1rem",
     },
     body2: {
-      fontWeight: 100,
+      fontWeight: 200,
       fontSize: "0.8rem",
+    },
+    caption: {
+      fontWeight: 200,
     },
   },
   palette: {
