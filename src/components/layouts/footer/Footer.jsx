@@ -1,5 +1,5 @@
 import logo from "../../../assets/logo-footer.svg";
-import { Box, IconButton, useMediaQuery } from "@mui/material";
+import { Box, IconButton, Typography, useMediaQuery } from "@mui/material";
 import Grid2 from "@mui/material/Grid2";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../context/useTheme";
@@ -77,11 +77,21 @@ const Footer = () => {
             gap={isSmallScreen ? 2 : { md: 10 }}
             sx={{ height: "100%" }}
           >
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/skills">Skills</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/">
+              <Typography variant="body2">Home</Typography>
+            </Link>
+            <Link to="/about">
+              <Typography variant="body2">About</Typography>
+            </Link>
+            <Link to="/skills">
+              <Typography variant="body2">Skills</Typography>
+            </Link>
+            <Link to="/projects">
+              <Typography variant="body2">Projects</Typography>
+            </Link>
+            <Link to="/contact">
+              <Typography variant="body2">Contact</Typography>
+            </Link>
           </Box>
         </Grid2>
 

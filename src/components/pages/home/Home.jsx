@@ -1,14 +1,12 @@
-import { Box } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { pink } from "@mui/material/colors";
+import Button from "../../common/button/Button";
 
 // icons
 import MailIcon from "@mui/icons-material/Mail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Button from "../../common/button/Button";
-
-import "./home.css";
 
 const Home = () => {
   const pink600 = pink[600];
@@ -30,17 +28,21 @@ const Home = () => {
 
   return (
     <Box textAlign="center">
-      <h3>Hi there!</h3>
-      <h2>I’m Valeria Casatti</h2>
-      <h1>Junior Full Stack Developer</h1>
-      <p>
-        Passionate about advancing my expertise in web development, eager to
-        embark on a continuous learning journey and further professionalize in
-        the dynamic tech industry.
-      </p>
+      <Container maxWidth="lg">
+        <Typography variant="h3" mb={2}>
+          Hi there!
+        </Typography>
+        <Typography variant="h2">I’m Valeria Casatti</Typography>
+        <Typography variant="h1">Junior Full Stack Developer</Typography>
+        <Typography variant="body1" mt={2}>
+          Passionate about advancing my expertise in web development, eager to
+          embark on a continuous learning journey and further professionalize in
+          the dynamic tech industry.
+        </Typography>
+      </Container>
 
       {/* buttons */}
-      <Box display="flex" justifyContent="center" mt="2rem" gap={4}>
+      <Box display="flex" justifyContent="center" mt={4} gap={4}>
         <Button onClick={handleOpenCV} className="contained-btn">
           view cv
         </Button>
@@ -48,6 +50,7 @@ const Home = () => {
           hire me
         </Button>
       </Box>
+
       {/* icons */}
       <Box
         sx={{

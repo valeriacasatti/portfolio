@@ -1,6 +1,29 @@
 import { createTheme } from "@mui/material/styles";
 
 export const lightTheme = createTheme({
+  typography: {
+    fontFamily: "M PLUS 2, sans-serif",
+    h1: {
+      fontWeight: 300,
+      fontSize: "3.5rem",
+    },
+    h2: {
+      fontWeight: 200,
+      fontSize: "2.5rem",
+    },
+    h3: {
+      fontWeight: 200,
+      fontSize: "2rem",
+    },
+    body1: {
+      fontWeight: 200,
+      fontSize: "1rem",
+    },
+    body2: {
+      fontWeight: 100,
+      fontSize: "0.8rem",
+    },
+  },
   palette: {
     mode: "light",
     primary: {
@@ -16,6 +39,29 @@ export const lightTheme = createTheme({
 });
 
 export const darkTheme = createTheme({
+  typography: {
+    fontFamily: "M PLUS 2, sans-serif",
+    h1: {
+      fontWeight: 300,
+      fontSize: "3.5rem",
+    },
+    h2: {
+      fontWeight: 200,
+      fontSize: "2.5rem",
+    },
+    h3: {
+      fontWeight: 200,
+      fontSize: "2rem",
+    },
+    body1: {
+      fontWeight: 200,
+      fontSize: "1rem",
+    },
+    body2: {
+      fontWeight: 100,
+      fontSize: "0.8rem",
+    },
+  },
   palette: {
     mode: "dark",
     primary: {

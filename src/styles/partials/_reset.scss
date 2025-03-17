@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $fontMPlus2;
-  font-weight: 300;
   transition: background-color 0.3s ease, color 0.3s ease;
   &::selection {
     background-color: $lightPink;
@@ -19,17 +18,12 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      font-size: 67px;
-    }
-    h2 {
-      font-size: 50px;
     }
     h3 {
       background: $gradientText;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      font-size: 23px;
     }
     a {
       color: inherit;
