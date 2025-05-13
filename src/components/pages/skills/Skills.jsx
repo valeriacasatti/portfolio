@@ -14,31 +14,28 @@ import mysql from "../../../assets/skills/MySQL.png";
 import node from "../../../assets/skills/NODE.png";
 import react from "../../../assets/skills/REACT.png";
 
+import "./skills.css";
+
 const Skills = () => {
   return (
-    <Box textAlign="center" mt={5}>
-      <Typography variant="h2" mb={3}>
+    <Box>
+      <Typography variant="h2" mb={5}>
         Skills
       </Typography>
-      <Box
-        display="flex"
-        justifyContent="center"
-        gap={4}
-        backgroundColor="rgba(255, 255, 255, 0.1)"
-        padding={2}
-      >
-        <img src={canva} alt="canva" height="50px" />
-        <img src={css} alt="css" height="50px" />
-        <img src={figma} alt="figma" height="50px" />
-        <img src={github} alt="github" height="50px" />
-        <img src={html} alt="html" height="50px" />
-        <img src={java} alt="java" height="50px" />
-        <img src={js} alt="js" height="50px" />
-        <img src={materialui} alt="materialui" height="50px" />
-        <img src={mongodb} alt="mongodb" height="50px" />
-        <img src={mysql} alt="mysql" height="50px" />
-        <img src={node} alt="node" height="50px" />
-        <img src={react} alt="react" height="50px" />
+
+      <Box className="skills-container">
+        <img src={canva} alt="canva" />
+        <img src={css} alt="css" />
+        <img src={figma} alt="figma" />
+        <img src={github} alt="github" />
+        <img src={html} alt="html" />
+        <img src={java} alt="java" />
+        <img src={js} alt="js" />
+        <img src={materialui} alt="materialui" />
+        <img src={mongodb} alt="mongodb" />
+        <img src={mysql} alt="mysql" />
+        <img src={node} alt="node" />
+        <img src={react} alt="react" />
       </Box>
     </Box>
   );

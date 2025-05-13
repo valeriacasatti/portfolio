@@ -9,7 +9,6 @@ import {
   Toolbar,
 } from "@mui/material";
 import { Link } from "react-scroll";
-import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useTheme } from "../../context/useTheme";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -18,7 +17,6 @@ import "./navbar.css";
 
 const Navbar = () => {
   const { theme } = useTheme();
-  const location = useLocation();
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -36,27 +34,20 @@ const Navbar = () => {
 
   return (
     <AppBar
-      position="static"
+      className="navbar"
       sx={{
         backgroundColor: theme.palette.background.default,
         transition: "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
       }}
     >
-      <Toolbar
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-        }}
-      >
+      <Toolbar className="toolbar">
         {/* logo */}
-        <Box component={Link} to="/">
-          <img src={logo} alt="logo" />
-        </Box>
+        <img src={logo} alt="logo" />
 
         {/* desktop navbar */}
         <Box
           className="navbar-links"
-          sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}
+          sx={{ display: { xs: "none", lg: "flex" } }}
         >
           {navLinks.map((link) => (
             <Link
@@ -64,8 +55,9 @@ const Navbar = () => {
               to={link.to}
               smooth={true}
               duration={500}
-              className={location.pathname === link.to ? "active" : ""}
-              style={{ cursor: "pointer" }}
+              spy={true}
+              offset={-180}
+              activeClass="active"
             >
               {link.label}
             </Link>
@@ -75,9 +67,9 @@ const Navbar = () => {
         {/* mobile menu button */}
         <IconButton
           onClick={handleDrawerToggle}
-          sx={{ display: { xs: "block", md: "none" } }}
+          sx={{ display: { xs: "block", lg: "none" } }}
         >
-          <MenuIcon />
+          <MenuIcon className="mobile-menu-icon" />
         </IconButton>
 
         {/* mobile menu */}
@@ -85,23 +77,34 @@ const Navbar = () => {
           anchor="right"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          sx={{
-            "& .MuiDrawer-paper": {
-              backgroundColor: theme.palette.background.default,
-              transition:
-                "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
+          slotProps={{
+            paper: {
+              sx: {
+                backgroundColor: theme.palette.background.default,
+                transition:
+                  "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
+              },
+              className: "mobile-menu",
             },
           }}
         >
           <List>
+            <img src={logo} alt="logo" />
+
             {navLinks.map((link) => (
-              <ListItem button key={link.to} onClick={handleDrawerToggle}>
+              <ListItem
+                key={link.to}
+                onClick={handleDrawerToggle}
+                className="mobile-menu-list"
+              >
                 <ListItemText>
                   <Link
                     to={link.to}
                     smooth={true}
                     duration={500}
-                    className={location.pathname === link.to ? "active" : ""}
+                    spy={true}
+                    offset={-180}
+                    activeClass="active"
                   >
                     {link.label}
                   </Link>

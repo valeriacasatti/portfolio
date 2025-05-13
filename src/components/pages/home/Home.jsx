@@ -36,13 +36,15 @@ const Home = () => {
   return (
     <>
       <div id="home">
-        <Box textAlign="center">
+        <Box mt="3rem">
           <Container maxWidth="lg">
-            <Typography variant="h3" mb={2}>
+            <Typography variant="h3" className="gradientText" mb={2}>
               Hi there!
             </Typography>
             <Typography variant="h2">I’m Valeria Casatti</Typography>
-            <Typography variant="h1">Junior Full Stack Developer</Typography>
+            <Typography variant="h1" className="gradientText">
+              Junior Full Stack Developer
+            </Typography>
             <Typography variant="body1" mt={2}>
               Passionate about advancing my expertise in web development, eager
               to embark on a continuous learning journey and further
@@ -87,23 +89,22 @@ const Home = () => {
               <GitHubIcon sx={{ color: pink600, fontSize: 20 }} />
             </a>
           </Box>
-
-          {/* pages */}
-          <div id="about">
-            <About />
-          </div>
-          <div id="skills">
-            <Skills />
-          </div>
-          <div id="projects">
-            <Projects />
-          </div>
-          <div id="contact">
-            <Contact />
-          </div>
-          <Footer />
         </Box>
       </div>
+      {/* pages */}
+      <div id="about">
+        <About />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+      <Footer />
     </>
   );
 };

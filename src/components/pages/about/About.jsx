@@ -19,21 +19,25 @@ const About = () => {
   };
 
   return (
-    <Box textAlign="center" mt={5}>
+    <Box>
       <Container maxWidth="lg">
-        <Typography variant="h2">About</Typography>
-        <Typography variant="body1" mt={3}>
-          Recent graduate as a Full Stack Web Developer from Coderhouse, I am
-          enthusiastic about launching a rewarding career in the field. Eager to
-          join a team of experienced developers, I aim to build a strong career
-          foundation through active participation in innovative projects. I
-          recently attained certifications in Backend Development, React JS,
-          JavaScript, and Web Design
+        <Typography variant="h2" mb={5}>
+          About
+        </Typography>
+        <Typography variant="body1">
+          I’m a passionate Full Stack Web Developer with a focus on creating
+          innovative and efficient web applications. With a solid foundation in
+          both frontend and backend development, I thrive in collaborative
+          environments where I can contribute to impactful projects. I have a
+          keen interest in continuous learning and am always exploring new
+          technologies to enhance my skill set. Currently, I’m focused on
+          expanding my expertise in React, JavaScript, and backend technologies
+          to build seamless and scalable web solutions.
         </Typography>
       </Container>
 
       {/* contact info */}
-      <Box my={4} display="flex" justifyContent="center">
+      <Box display="flex" justifyContent="center" my={5}>
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <Box display="flex" alignItems="center" mb={2}>
             <LocationOnIcon sx={{ color: pink600, marginRight: 1 }} />

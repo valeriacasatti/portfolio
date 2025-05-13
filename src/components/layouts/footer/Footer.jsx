@@ -16,7 +16,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const Footer = () => {
   const { theme, toggleTheme } = useTheme();
   const pink600 = pink[600];
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <>
@@ -31,7 +31,7 @@ const Footer = () => {
         <Grid2 container>
           {/* logo and icons */}
           <Grid2
-            size={{ xs: 12, md: 2 }}
+            size={{ xs: 12, lg: 2 }}
             sx={{
               textAlign: isSmallScreen ? "center" : "left",
               marginBottom: isSmallScreen ? "1rem" : 0,
@@ -43,7 +43,7 @@ const Footer = () => {
               display="flex"
               justifyContent={isSmallScreen ? "center" : "flex-start"}
               marginTop="1rem"
-              gap={{ xs: 2, md: 3 }}
+              gap={{ xs: 2, lg: 3 }}
             >
               <a href="mailto:valeria.casatti@gmail.com" target="_blank">
                 <MailIcon sx={{ color: pink600, fontSize: 20 }} />
@@ -65,8 +65,9 @@ const Footer = () => {
 
           {/* links */}
           <Grid2
-            size={{ xs: 12, md: 9 }}
+            size={{ xs: 12, lg: 9 }}
             sx={{
+              flexWrap: "wrap",
               textAlign: "center",
               marginBottom: isSmallScreen ? "1rem" : 0,
             }}
@@ -75,47 +76,22 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               justifyContent="center"
-              gap={isSmallScreen ? 2 : { md: 10 }}
+              gap={isSmallScreen ? 2 : { lg: 10 }}
               sx={{ height: "100%" }}
             >
-              <Link
-                to="home"
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
+              <Link to="home" smooth={true} duration={500}>
                 <Typography variant="body2">Home</Typography>
               </Link>
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
+              <Link to="about" smooth={true} duration={500}>
                 <Typography variant="body2">About</Typography>
               </Link>
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
+              <Link to="skills" smooth={true} duration={500}>
                 <Typography variant="body2">Skills</Typography>
               </Link>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
+              <Link to="projects" smooth={true} duration={500}>
                 <Typography variant="body2">Projects</Typography>
               </Link>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
+              <Link to="contact" smooth={true} duration={500}>
                 <Typography variant="body2">Contact</Typography>
               </Link>
             </Box>
@@ -123,7 +99,7 @@ const Footer = () => {
 
           {/* theme icon */}
           <Grid2
-            size={{ xs: 12, md: 1 }}
+            size={{ xs: 12, lg: 1 }}
             sx={{
               display: "flex",
               justifyContent: isSmallScreen ? "center" : "flex-end",
@@ -139,7 +115,11 @@ const Footer = () => {
           </Grid2>
         </Grid2>
       </Box>
-      <Box textAlign="center" backgroundColor={pink600}>
+      <Box
+        textAlign="center"
+        flexWrap="wrap"
+        backgroundColor="rgba(255, 255, 255, 0.1)"
+      >
         <Typography variant="caption" align="center" sx={{ marginTop: "2rem" }}>
           © {new Date().getFullYear()} Valeria Casatti. Todos los derechos
           reservados.
