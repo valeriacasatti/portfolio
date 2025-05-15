@@ -7,12 +7,12 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 *::-moz-selection {
-  background-color: #d81b60;
-  color: #00171f;
+  background-color: rgba(216, 27, 96, 0.5);
+  color: #ffe0ec;
 }
 *::selection {
-  background-color: #d81b60;
-  color: #00171f;
+  background-color: rgba(216, 27, 96, 0.5);
+  color: #ffe0ec;
 }
 * body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -33,6 +33,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .contained-btn {
@@ -72,6 +73,10 @@
 #skills,
 #projects,
 #contact {
-  margin-top: 10rem;
+  height: 100vh;
   text-align: center;
+}
+
+#home {
+  margin-top: 10rem;
 }/*# sourceMappingURL=style.css.map */

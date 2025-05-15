@@ -1,13 +1,12 @@
 .projects-container {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-evenly;
 }
 
 .project-card {
   --Paper-shadow: none !important;
   --Paper-overlay: none !important;
-  max-width: 345px;
+  max-width: 380px;
 }
 
 .project-card:hover {
@@ -26,12 +25,12 @@
   height: 10rem;
   border-radius: 12px;
   transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
 }
 
 .project-preview:hover {
   transform: scale(1.02);
   filter: brightness(1.15);
-  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }

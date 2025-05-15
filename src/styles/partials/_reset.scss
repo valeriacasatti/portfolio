@@ -6,7 +6,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   &::selection {
     background-color: $lightPink;
-    color: $darkBlue;
+    color: $light;
   }
   body {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -18,7 +18,7 @@
       text-decoration: none;
       cursor: pointer;
       &:hover {
-        color: $lightPink;
+        color: $darkPink;
       }
     }
     .gradientText {
@@ -26,6 +26,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      -webkit-text-fill-color: transparent;
     }
   }
 }

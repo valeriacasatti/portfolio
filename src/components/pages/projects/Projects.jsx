@@ -76,7 +76,6 @@ const Projects = () => {
           <Card
             className="project-card"
             sx={{
-              maxWidth: 345,
               backgroundColor: theme.palette.background.default,
               transition:
                 "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
@@ -120,7 +119,6 @@ const Projects = () => {
           <Card
             className="project-card"
             sx={{
-              maxWidth: 345,
               backgroundColor: theme.palette.background.default,
               transition:
                 "background-color 0.3s ease-in-out, color 0.3s ease-in-out",

@@ -17,11 +17,11 @@ export const lightTheme = createTheme({
     },
     body1: {
       fontWeight: 200,
-      fontSize: "1.5rem",
+      fontSize: "1rem",
     },
     body2: {
       fontWeight: 200,
-      fontSize: "1rem",
+      fontSize: "0.8rem",
     },
     caption: {
       fontWeight: 200,
