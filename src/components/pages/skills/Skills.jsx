@@ -1,22 +1,8 @@
+/* eslint-disable react/prop-types */
 import { Box, Typography } from "@mui/material";
-
-// imgs
-import canva from "../../../assets/skills/CANVA.png";
-import css from "../../../assets/skills/CSS.png";
-import figma from "../../../assets/skills/FIGMA.png";
-import github from "../../../assets/skills/GITHUB.png";
-import html from "../../../assets/skills/HTML.png";
-import java from "../../../assets/skills/JAVA.png";
-import js from "../../../assets/skills/JS.jpg";
-import materialui from "../../../assets/skills/MATERIALUI.png";
-import mongodb from "../../../assets/skills/MONGODB.png";
-import mysql from "../../../assets/skills/MySQL.png";
-import node from "../../../assets/skills/NODE.png";
-import react from "../../../assets/skills/REACT.png";
-
 import "./skills.css";
 
-const Skills = () => {
+const Skills = ({ skills }) => {
   return (
     <Box>
       <Typography variant="h2" mb={5}>
@@ -24,7 +10,12 @@ const Skills = () => {
       </Typography>
 
       <Box className="skills-container">
-        <img src={canva} alt="canva" />
+        {skills.length > 0 &&
+          skills.map((skill) => {
+            return <img key={skill.id} src={skill.img} alt={skill.name} />;
+          })}
+
+        {/* <img src={canva} alt="canva" />
         <img src={css} alt="css" />
         <img src={figma} alt="figma" />
         <img src={github} alt="github" />
@@ -35,7 +26,7 @@ const Skills = () => {
         <img src={mongodb} alt="mongodb" />
         <img src={mysql} alt="mysql" />
         <img src={node} alt="node" />
-        <img src={react} alt="react" />
+        <img src={react} alt="react" /> */}
       </Box>
     </Box>
   );

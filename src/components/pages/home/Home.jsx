@@ -10,10 +10,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 // pages
 import About from "../about/About";
-import Skills from "../skills/Skills";
-import Projects from "../projects/Projects";
 import Contact from "../contact/Contact";
 import Footer from "../../layouts/footer/Footer";
+import ProjectsContainer from "../projects/ProjectsContainer";
+import SkillsContainer from "../skills/SkillsContainer";
 
 const Home = () => {
   const pink600 = pink[600];
@@ -96,10 +96,10 @@ const Home = () => {
         <About />
       </div>
       <div id="skills">
-        <Skills />
+        <SkillsContainer />
       </div>
       <div id="projects">
-        <Projects />
+        <ProjectsContainer />
       </div>
       <div id="contact">
         <Contact />

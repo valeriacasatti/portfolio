@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Box, Typography, TextField } from "@mui/material";
 import Button from "../../common/button/Button";
 
 import "./contact.css";
 
-const Contact = () => {
+const Contact = ({ handleChange, handleSubmit }) => {
   return (
     <Box>
       <Typography variant="h2" mb={3}>
@@ -13,18 +14,27 @@ const Contact = () => {
       {/* form */}
       <Box
         component="form"
+        onSubmit={handleSubmit}
         noValidate
+        autoComplete="off"
         className="contact-form"
         sx={{ "& .MuiTextField-root": { mb: 2 } }}
       >
         <Box>
-          <Typography htmlFor="name" sx={{ mb: 1, textAlign: "left" }}>
-            Name
+          <Typography
+            variant="body2"
+            htmlFor="name"
+            sx={{ mb: 1, textAlign: "left" }}
+          >
+            Name *
           </Typography>
           <TextField
+            id="name"
+            name="name"
+            // value={formData.name}
+            onChange={handleChange}
             fullWidth
             className="contact-textfield"
-            id="name"
             placeholder="Your full name"
             sx={{
               "& .MuiOutlinedInput-root": {
@@ -52,13 +62,21 @@ const Contact = () => {
               },
             }}
           />
-          <Typography htmlFor="email" sx={{ mb: 1, textAlign: "left" }}>
-            Email
+
+          <Typography
+            variant="body2"
+            htmlFor="email"
+            sx={{ mb: 1, textAlign: "left" }}
+          >
+            Email *
           </Typography>
           <TextField
+            id="email"
+            name="email"
+            // value={formData.email}
+            onChange={handleChange}
             fullWidth
             className="contact-textfield"
-            id="email"
             placeholder="me@company.com"
             sx={{
               "& .MuiOutlinedInput-root": {
@@ -86,16 +104,24 @@ const Contact = () => {
               },
             }}
           />
-          <Typography htmlFor="message" sx={{ mb: 1, textAlign: "left" }}>
-            Message
+
+          <Typography
+            variant="body2"
+            htmlFor="message"
+            sx={{ mb: 1, textAlign: "left" }}
+          >
+            Message *
           </Typography>
           <TextField
+            id="message"
+            name="message"
+            // value={formData.message}
+            onChange={handleChange}
             fullWidth
             className="contact-textfield"
-            id="message"
             placeholder="Your message..."
             multiline
-            rows={4}
+            rows={3}
             sx={{
               "& .MuiOutlinedInput-root": {
                 transition: "all 0.4s ease",
@@ -124,7 +150,9 @@ const Contact = () => {
           />
         </Box>
 
-        <Button className="contained-btn">send</Button>
+        <Button type="submit" className="contained-btn">
+          send
+        </Button>
       </Box>
     </Box>
   );
