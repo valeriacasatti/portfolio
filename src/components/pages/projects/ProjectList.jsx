@@ -2,10 +2,11 @@
 import { Box, Typography } from "@mui/material";
 
 import Project from "./Project";
+import "./projects.css";
 
 const ProjectList = ({ projects }) => {
   return (
-    <Box>
+    <Box mb="5rem" textAlign="center">
       <Typography variant="h2" mb={5}>
         Projects
       </Typography>

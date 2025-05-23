@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Box, Container, Typography } from "@mui/material";
 import { pink } from "@mui/material/colors";
 import Button from "../../common/button/Button";
@@ -7,19 +8,11 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 
-const About = () => {
+const About = ({ handleSendEmail }) => {
   const pink600 = pink[600];
 
-  // send email
-  const emailURL =
-    "https://mail.google.com/mail/?view=cm&fs=1&to=valeria.casatti@gmail.com&su=Interested%20in%20your%20services&body=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20work.";
-
-  const handleSendEmail = () => {
-    window.open(emailURL, "_blank");
-  };
-
   return (
-    <Box>
+    <Box mb="5rem" textAlign="center">
       <Container maxWidth="lg">
         <Typography variant="h2" mb={5}>
           About

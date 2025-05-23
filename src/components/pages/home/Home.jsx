@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Box, Container, Typography } from "@mui/material";
 import { pink } from "@mui/material/colors";
 import Button from "../../common/button/Button";
@@ -9,34 +10,19 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 // pages
-import About from "../about/About";
-import Contact from "../contact/Contact";
-import Footer from "../../layouts/footer/Footer";
-import ProjectsContainer from "../projects/ProjectsContainer";
+import AboutContainer from "../about/AboutContainer";
 import SkillsContainer from "../skills/SkillsContainer";
+import ProjectsContainer from "../projects/ProjectsContainer";
+import ContactContainer from "../contact/ContactContainer";
+import Footer from "../../layouts/footer/Footer";
 
-const Home = () => {
+const Home = ({ handleOpenCV, handleSendEmail, emailURL }) => {
   const pink600 = pink[600];
-
-  // view CV
-  const handleOpenCV = () => {
-    window.open(
-      "https://drive.google.com/file/d/1HhufSxW5p8dEQUTKweb3JOcFWlRnLz4C/view?usp=sharing"
-    );
-  };
-
-  // send email
-  const emailURL =
-    "https://mail.google.com/mail/?view=cm&fs=1&to=valeria.casatti@gmail.com&su=Interested%20in%20your%20services&body=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20work.";
-
-  const handleSendEmail = () => {
-    window.open(emailURL, "_blank");
-  };
 
   return (
     <>
       <div id="home">
-        <Box mt="3rem">
+        <Box mt="10rem" mb="5rem" textAlign="center">
           <Container maxWidth="lg">
             <Typography variant="h3" className="gradientText" mb={2}>
               Hi there!
@@ -93,7 +79,7 @@ const Home = () => {
       </div>
       {/* pages */}
       <div id="about">
-        <About />
+        <AboutContainer />
       </div>
       <div id="skills">
         <SkillsContainer />
@@ -102,7 +88,7 @@ const Home = () => {
         <ProjectsContainer />
       </div>
       <div id="contact">
-        <Contact />
+        <ContactContainer />
       </div>
       <Footer />
     </>

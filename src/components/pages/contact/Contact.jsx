@@ -3,14 +3,14 @@ import { Box, Typography, TextField } from "@mui/material";
 import Button from "../../common/button/Button";
 
 import "./contact.css";
+import { ToastContainer, Zoom } from "react-toastify";
 
-const Contact = ({ handleChange, handleSubmit }) => {
+const Contact = ({ handleChange, handleSubmit, errors }) => {
   return (
-    <Box>
+    <Box textAlign="center">
       <Typography variant="h2" mb={3}>
         Contact
       </Typography>
-
       {/* form */}
       <Box
         component="form"
@@ -21,17 +21,19 @@ const Contact = ({ handleChange, handleSubmit }) => {
         sx={{ "& .MuiTextField-root": { mb: 2 } }}
       >
         <Box>
+          {/* name */}
           <Typography
             variant="body2"
             htmlFor="name"
             sx={{ mb: 1, textAlign: "left" }}
           >
-            Name *
+            <span>Name *</span>
+            {/* error message*/}
+            <span className="error-message">{errors.name}</span>
           </Typography>
           <TextField
             id="name"
             name="name"
-            // value={formData.name}
             onChange={handleChange}
             fullWidth
             className="contact-textfield"
@@ -63,12 +65,15 @@ const Contact = ({ handleChange, handleSubmit }) => {
             }}
           />
 
+          {/* email */}
           <Typography
             variant="body2"
             htmlFor="email"
             sx={{ mb: 1, textAlign: "left" }}
           >
-            Email *
+            <span>Email *</span>
+            {/* error message*/}
+            <span className="error-message">{errors.email}</span>
           </Typography>
           <TextField
             id="email"
@@ -104,13 +109,15 @@ const Contact = ({ handleChange, handleSubmit }) => {
               },
             }}
           />
-
+          {/* message */}
           <Typography
             variant="body2"
             htmlFor="message"
             sx={{ mb: 1, textAlign: "left" }}
           >
-            Message *
+            <span>Message *</span>
+            {/* error message*/}
+            <span className="error-message">{errors.message}</span>
           </Typography>
           <TextField
             id="message"
@@ -154,6 +161,15 @@ const Contact = ({ handleChange, handleSubmit }) => {
           send
         </Button>
       </Box>
+
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar
+        closeButton={false}
+        transition={Zoom}
+        toastClassName="custom-toast"
+      />
     </Box>
   );
 };
