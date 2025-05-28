@@ -1,0 +1,47 @@
+.contact-form {
+  max-width: 50%;
+  margin-inline: auto;
+}
+
+.contact-textfield {
+  background-color: white;
+  border-radius: 15px;
+}
+
+.contact-textfield input::placeholder,
+.contact-textfield textarea::placeholder {
+  background: linear-gradient(
+    0deg,
+    rgba(216, 27, 96, 1) 20%,
+    rgba(44, 127, 141, 1) 70%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.error-message {
+  margin-left: 0.5rem;
+  color: #d81b60;
+  font-weight: 300;
+}
+
+.custom-toast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 196, 111, 0.8);
+  color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgba(216, 27, 96, 0.5) inset !important;
+  -webkit-text-fill-color: #fff !important;
+  border-radius: 15px !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontMPlus2;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  &::selection {
+    background-color: $lightPink;
+    color: $light;
+  }
+  body {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    li {
+      list-style-type: none;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        color: $darkPink;
+      }
+    }
+    .gradientText {
+      background: $gradientText;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
