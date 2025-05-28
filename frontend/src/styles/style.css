@@ -28,6 +28,13 @@
 * body a:hover {
   color: #d81b60;
 }
+* body .icon {
+  font-size: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+* body .icon:hover {
+  transform: scale(1.2);
+}
 * body .gradientText {
   background: linear-gradient(0deg, rgb(216, 27, 96) 20%, rgb(44, 127, 141) 70%);
   -webkit-background-clip: text;

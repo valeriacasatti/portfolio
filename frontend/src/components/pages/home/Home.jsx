@@ -58,21 +58,21 @@ const Home = ({ handleOpenCV, handleSendEmail, emailURL }) => {
             }}
           >
             <a href={emailURL} target="_blank">
-              <MailIcon sx={{ color: pink600, fontSize: 20 }} />
+              <MailIcon sx={{ color: pink600 }} className="icon" />
             </a>
 
             <a href="https://wa.me/5493516177344" target="_blank">
-              <WhatsAppIcon sx={{ color: pink600, fontSize: 20 }} />
+              <WhatsAppIcon sx={{ color: pink600 }} className="icon" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/valeriacasatti"
               target="_blank"
             >
-              <LinkedInIcon sx={{ color: pink600, fontSize: 20 }} />
+              <LinkedInIcon sx={{ color: pink600 }} className="icon" />
             </a>
             <a href="https://github.com/valeriacasatti" target="_blank">
-              <GitHubIcon sx={{ color: pink600, fontSize: 20 }} />
+              <GitHubIcon sx={{ color: pink600 }} className="icon" />
             </a>
           </Box>
         </Box>

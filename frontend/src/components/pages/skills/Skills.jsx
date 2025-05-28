@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Box, Typography } from "@mui/material";
+import { Box, Tooltip, Typography, Zoom } from "@mui/material";
 import "./skills.css";
 
 const Skills = ({ skills }) => {
@@ -12,7 +12,18 @@ const Skills = ({ skills }) => {
       <Box className="skills-container">
         {skills.length > 0 &&
           skills.map((skill) => {
-            return <img key={skill.id} src={skill.img} alt={skill.name} />;
+            return (
+              <Tooltip
+                key={skill.id}
+                title={skill.name}
+                arrow
+                slots={{
+                  transition: Zoom,
+                }}
+              >
+                <img src={skill.img} alt={skill.name} />
+              </Tooltip>
+            );
           })}
       </Box>
     </Box>

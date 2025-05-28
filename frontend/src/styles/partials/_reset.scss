@@ -21,6 +21,13 @@
         color: $darkPink;
       }
     }
+    .icon {
+      font-size: 20px;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
     .gradientText {
       background: $gradientText;
       -webkit-background-clip: text;

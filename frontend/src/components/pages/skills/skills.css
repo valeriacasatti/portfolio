@@ -9,4 +9,9 @@
 
 .skills-container img {
   height: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills-container img:hover {
+  transform: scale(1.2);
 }

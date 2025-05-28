@@ -1,4 +1,4 @@
-import error404 from "../../../../public/404.png";
+import error404 from "../../../assets/404.png";
 import { Box } from "@mui/material";
 import { useTheme } from "../../context/useTheme";
 import Button from "../../common/button/Button";
