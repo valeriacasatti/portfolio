@@ -5,7 +5,7 @@ import Button from "../../common/button/Button";
 import "./contact.css";
 import { ToastContainer, Zoom } from "react-toastify";
 
-const Contact = ({ handleChange, handleSubmit, errors }) => {
+const Contact = ({ formik }) => {
   return (
     <Box textAlign="center">
       <Typography variant="h2" mb={3}>
@@ -14,7 +14,7 @@ const Contact = ({ handleChange, handleSubmit, errors }) => {
       {/* form */}
       <Box
         component="form"
-        onSubmit={handleSubmit}
+        onSubmit={formik.handleSubmit}
         noValidate
         autoComplete="off"
         className="contact-form"
@@ -29,12 +29,14 @@ const Contact = ({ handleChange, handleSubmit, errors }) => {
           >
             <span>Name *</span>
             {/* error message*/}
-            <span className="error-message">{errors.name}</span>
+            <span className="error-message">{formik.errors.name}</span>
           </Typography>
           <TextField
             id="name"
             name="name"
-            onChange={handleChange}
+            value={formik.values.name}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             fullWidth
             className="contact-textfield"
             placeholder="Your full name"
@@ -73,13 +75,14 @@ const Contact = ({ handleChange, handleSubmit, errors }) => {
           >
             <span>Email *</span>
             {/* error message*/}
-            <span className="error-message">{errors.email}</span>
+            <span className="error-message">{formik.errors.email}</span>
           </Typography>
           <TextField
             id="email"
             name="email"
-            // value={formData.email}
-            onChange={handleChange}
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             fullWidth
             className="contact-textfield"
             placeholder="me@company.com"
@@ -117,13 +120,14 @@ const Contact = ({ handleChange, handleSubmit, errors }) => {
           >
             <span>Message *</span>
             {/* error message*/}
-            <span className="error-message">{errors.message}</span>
+            <span className="error-message">{formik.errors.message}</span>
           </Typography>
           <TextField
             id="message"
             name="message"
-            // value={formData.message}
-            onChange={handleChange}
+            value={formik.values.message}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             fullWidth
             className="contact-textfield"
             placeholder="Your message..."
@@ -157,8 +161,12 @@ const Contact = ({ handleChange, handleSubmit, errors }) => {
           />
         </Box>
 
-        <Button type="submit" className="contained-btn">
-          send
+        <Button
+          type="submit"
+          disabled={formik.isSubmitting}
+          className="contained-btn"
+        >
+          {formik.isSubmitting ? "sending..." : "send"}
         </Button>
       </Box>
 
