@@ -22,7 +22,7 @@ const Home = ({ handleOpenCV, handleSendEmail, emailURL }) => {
   return (
     <>
       <div id="home">
-        <Box mt="10rem" mb="5rem" textAlign="center">
+        <Box mt="11rem" mb="5rem" textAlign="center">
           <Container maxWidth="lg">
             <Typography variant="h3" className="gradientText" mb={2}>
               Hi there!

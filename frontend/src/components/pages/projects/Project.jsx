@@ -11,7 +11,13 @@ const Project = ({ project }) => {
   const { theme } = useTheme();
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       {/* img preview */}
       <a href={project.url} target="_blank">
         <img
@@ -31,12 +37,7 @@ const Project = ({ project }) => {
       >
         <CardContent>
           {/* title */}
-          <Typography
-            gutterBottom
-            variant="h3"
-            component="div"
-            className="card-title"
-          >
+          <Typography gutterBottom variant="h3" component="div">
             {project.title}
           </Typography>
 
@@ -46,9 +47,7 @@ const Project = ({ project }) => {
           </Typography>
 
           {/* description */}
-          <Typography variant="body1" className="project-description">
-            {project.description}
-          </Typography>
+          <Typography variant="body1">{project.description}</Typography>
         </CardContent>
       </Card>
     </Box>

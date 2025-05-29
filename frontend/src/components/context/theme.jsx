@@ -21,7 +21,7 @@ export const lightTheme = createTheme({
     },
     body2: {
       fontWeight: 200,
-      fontSize: "0.8rem",
+      fontSize: "15px",
     },
     caption: {
       fontWeight: 200,
@@ -62,7 +62,7 @@ export const darkTheme = createTheme({
     },
     body2: {
       fontWeight: 200,
-      fontSize: "0.8rem",
+      fontSize: "15px",
     },
     caption: {
       fontWeight: 200,

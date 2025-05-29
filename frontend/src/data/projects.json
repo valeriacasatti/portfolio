@@ -9,13 +9,12 @@
   },
   {
     "id": 2,
-    "url": "https://proyecto-final-casatti-production.up.railway.app/",
-    "img": "/src/assets/projects/ecommerce-backend.png",
-    "title": "Backend E-commerce ",
-    "technology": "NodeJS | MongoDB | ExpressJS",
-    "description": "A backend for an e-commerce site using Node and MongoDB. Includes user auth, product APIs, and secure data handling for a full-stack app."
+    "url": "https://wra.warrior.com.ar/",
+    "img": "/src/assets/projects/WRA.png",
+    "title": "WRA",
+    "technology": "HTML + Bootstrap | PHP | Javascript | MySQL",
+    "description": "Innovative system designed to optimize and simplify technical assistance and remote maintenance monitoring of equipment efficiently."
   },
-
   {
     "id": 3,
     "url": "https://proyecto-final-js-casatti.vercel.app/",
@@ -23,5 +22,13 @@
     "title": "JS E-commerce",
     "technology": "Javascript",
     "description": "A basic e-commerce interface built with vanilla JavaScript. This project simulates key features like a dynamic cart and product catalog."
+  },
+  {
+    "id": 4,
+    "url": "https://proyecto-final-casatti-production.up.railway.app/",
+    "img": "/src/assets/projects/ecommerce-backend.png",
+    "title": "Backend E-commerce ",
+    "technology": "NodeJS | MongoDB | ExpressJS",
+    "description": "A backend for an e-commerce site using Node and MongoDB. Includes user auth, product APIs, and secure data handling for a full-stack app."
   }
 ]

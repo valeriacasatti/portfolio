@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Box, Typography } from "@mui/material";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import Project from "./Project";
 import "./projects.css";
 
@@ -11,12 +17,25 @@ const ProjectList = ({ projects }) => {
         Projects
       </Typography>
 
-      <Box className="projects-container">
+      <Swiper
+        modules={[Navigation, Pagination]}
+        navigation
+        pagination={{ clickable: true }}
+        spaceBetween={30}
+        slidesPerView={3}
+        breakpoints={{
+          1450: { slidesPerView: 3 },
+          1100: { slidesPerView: 2, spaceBetween: 0 },
+          0: { slidesPerView: 1 },
+        }}
+      >
         {projects.length > 0 &&
-          projects.map((project) => {
-            return <Project key={project.id} project={project} />;
-          })}
-      </Box>
+          projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <Project project={project} />
+            </SwiperSlide>
+          ))}
+      </Swiper>
     </Box>
   );
 };
