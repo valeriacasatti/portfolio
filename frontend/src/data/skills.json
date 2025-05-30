@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "img": "/src/assets/skills/CANVA.png",
+    "img": "/skills/CANVA.png",
     "name": "canva"
   },
   {
     "id": 2,
-    "img": "/src/assets/skills/CSS.png",
+    "img": "/skills/CSS.png",
     "name": "css"
   },
   {
     "id": 3,
-    "img": "/src/assets/skills/FIGMA.png",
+    "img": "/skills/FIGMA.png",
     "name": "figma"
   },
   {
     "id": 4,
-    "img": "/src/assets/skills/GITHUB.png",
+    "img": "/skills/GITHUB.png",
     "name": "github"
   },
   {
     "id": 5,
-    "img": "/src/assets/skills/HTML.png",
+    "img": "/skills/HTML.png",
     "name": "html"
   },
   {
     "id": 6,
-    "img": "/src/assets/skills/JAVA.png",
+    "img": "/skills/JAVA.png",
     "name": "java"
   },
   {
     "id": 7,
-    "img": "/src/assets/skills/JS.jpg",
+    "img": "/skills/JS.jpg",
     "name": "javascript"
   },
   {
     "id": 8,
-    "img": "/src/assets/skills/MATERIALUI.png",
+    "img": "/skills/MATERIALUI.png",
     "name": "material UI"
   },
   {
     "id": 9,
-    "img": "/src/assets/skills/MONGODB.png",
+    "img": "/skills/MONGODB.png",
     "name": "mongo DB"
   },
   {
     "id": 10,
-    "img": "/src/assets/skills/MySQL.png",
+    "img": "/skills/MySQL.png",
     "name": "MySQL"
   },
   {
     "id": 11,
-    "img": "/src/assets/skills/NODE.png",
+    "img": "/skills/NODE.png",
     "name": "node"
   },
   {
     "id": 12,
-    "img": "/src/assets/skills/REACT.png",
+    "img": "/skills/REACT.png",
     "name": "react"
   }
 ]
