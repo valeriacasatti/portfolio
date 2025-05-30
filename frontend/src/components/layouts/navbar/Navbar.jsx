@@ -40,7 +40,7 @@ const Navbar = () => {
         transition: "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
       }}
     >
-      <Toolbar className="toolbar">
+      <Toolbar disableGutters className="toolbar">
         {/* logo */}
         <img src={logo} alt="logo" />
 
