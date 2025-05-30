@@ -28,11 +28,14 @@ const ContactContainer = () => {
       const successMessage = "Email sent successfully";
       const errorMessage = "Something went wrong. Please try again";
       try {
-        const response = await fetch("http://localhost:8080/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(values),
-        });
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/contact`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(values),
+          }
+        );
         if (response.ok) {
           actions.setStatus(successMessage);
           actions.resetForm();
