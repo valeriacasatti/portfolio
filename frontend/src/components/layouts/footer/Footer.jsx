@@ -128,8 +128,7 @@ const Footer = () => {
         backgroundColor="rgba(255, 255, 255, 0.1)"
       >
         <Typography variant="caption" align="center" sx={{ marginTop: "2rem" }}>
-          © {new Date().getFullYear()} Valeria Casatti. Todos los derechos
-          reservados.
+          © {new Date().getFullYear()} Valeria Casatti. All rights reserved.
         </Typography>
       </Box>
     </>
