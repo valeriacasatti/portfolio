@@ -8,23 +8,23 @@ export const lightTheme = createTheme({
       fontSize: "3.5rem",
     },
     h2: {
-      fontWeight: 200,
+      fontWeight: 300,
       fontSize: "2.5rem",
     },
     h3: {
-      fontWeight: 200,
+      fontWeight: 300,
       fontSize: "2rem",
     },
     body1: {
-      fontWeight: 200,
+      fontWeight: 300,
       fontSize: "1rem",
     },
     body2: {
-      fontWeight: 200,
+      fontWeight: 300,
       fontSize: "15px",
     },
     caption: {
-      fontWeight: 200,
+      fontWeight: 300,
     },
   },
   palette: {

@@ -8,15 +8,23 @@ import {
   ListItemText,
   Toolbar,
 } from "@mui/material";
+
 import { Link } from "react-scroll";
 import { useState } from "react";
 import { useTheme } from "../../context/useTheme";
-import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../../../assets/logo.svg";
+import { pink } from "@mui/material/colors";
+
+// iconos
+import MenuIcon from "@mui/icons-material/Menu";
+import LightModeTwoToneIcon from "@mui/icons-material/LightModeTwoTone";
+import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
+
 import "./navbar.css";
 
 const Navbar = () => {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+  const pink600 = pink[600];
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -49,6 +57,7 @@ const Navbar = () => {
           className="navbar-links"
           sx={{ display: { xs: "none", lg: "flex" } }}
         >
+          {/* nav items */}
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -62,12 +71,36 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+
+          {/* theme button */}
+          <IconButton
+            onClick={toggleTheme}
+            sx={{
+              "&:hover": {
+                backgroundColor: "transparent",
+              },
+            }}
+          >
+            {theme.palette.mode === "light" ? (
+              <DarkModeTwoToneIcon sx={{ color: pink600 }} />
+            ) : (
+              <LightModeTwoToneIcon sx={{ color: pink600 }} />
+            )}
+          </IconButton>
         </Box>
 
         {/* mobile menu button */}
         <IconButton
           onClick={handleDrawerToggle}
-          sx={{ display: { xs: "block", lg: "none" } }}
+          sx={{
+            display: { xs: "block", lg: "none" },
+            "&:hover": {
+              backgroundColor: "transparent",
+            },
+            "&:focus": {
+              backgroundColor: "transparent",
+            },
+          }}
         >
           <MenuIcon className="mobile-menu-icon" />
         </IconButton>
@@ -89,8 +122,10 @@ const Navbar = () => {
           }}
         >
           <List>
+            {/* logo */}
             <img src={logo} alt="logo" />
 
+            {/* nav items */}
             {navLinks.map((link) => (
               <ListItem
                 key={link.to}
@@ -111,6 +146,24 @@ const Navbar = () => {
                 </ListItemText>
               </ListItem>
             ))}
+
+            {/* theme button */}
+            <Box width="100%" marginTop="1rem" textAlign="center">
+              <IconButton
+                onClick={toggleTheme}
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "transparent",
+                  },
+                }}
+              >
+                {theme.palette.mode === "light" ? (
+                  <DarkModeTwoToneIcon sx={{ color: pink600 }} />
+                ) : (
+                  <LightModeTwoToneIcon sx={{ color: pink600 }} />
+                )}
+              </IconButton>
+            </Box>
           </List>
         </Drawer>
       </Toolbar>
