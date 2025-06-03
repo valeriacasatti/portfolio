@@ -76,6 +76,7 @@ const Footer = () => {
               display="flex"
               alignItems="center"
               justifyContent="center"
+              flexWrap="wrap"
               gap={isSmallScreen ? 2 : { lg: 10 }}
               sx={{ height: "100%" }}
             >

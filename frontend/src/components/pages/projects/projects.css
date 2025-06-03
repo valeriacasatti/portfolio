@@ -4,9 +4,11 @@
   z-index: 1;
   position: relative;
   height: 10rem;
+  max-width: 100%;
   border-radius: 12px;
   transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+  object-fit: cover;
 }
 
 .project-preview:hover {
@@ -17,7 +19,6 @@
 }
 
 /* text content */
-
 .project-card {
   margin-top: 1rem;
   --Paper-shadow: none !important;
@@ -27,8 +28,8 @@
 
 /* swiper */
 .swiper {
-  margin-inline: 3rem;
-  padding: 0 30px;
+  margin-inline: 2rem;
+  padding: 0 20px;
 }
 
 .swiper-wrapper {
