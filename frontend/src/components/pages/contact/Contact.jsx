@@ -4,12 +4,15 @@ import Button from "../../common/button/Button";
 
 import "./contact.css";
 import { ToastContainer, Zoom } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 const Contact = ({ formik }) => {
+  const { t } = useTranslation();
+
   return (
     <Box textAlign="center">
       <Typography variant="h2" mb={3}>
-        Contact
+        {t("contact")}
       </Typography>
       {/* form */}
       <Box
@@ -27,7 +30,7 @@ const Contact = ({ formik }) => {
             htmlFor="name"
             sx={{ mb: 1, textAlign: "left" }}
           >
-            <span>Name *</span>
+            <span>{t("contact_name_label")} *</span>
             {/* error message*/}
             <span className="error-message">{formik.errors.name}</span>
           </Typography>
@@ -39,7 +42,7 @@ const Contact = ({ formik }) => {
             onBlur={formik.handleBlur}
             fullWidth
             className="contact-textfield"
-            placeholder="Your full name"
+            placeholder={t("contact_name_placeholder")}
             sx={{
               "& .MuiOutlinedInput-root": {
                 transition: "all 0.4s ease",
@@ -85,7 +88,7 @@ const Contact = ({ formik }) => {
             onBlur={formik.handleBlur}
             fullWidth
             className="contact-textfield"
-            placeholder="me@company.com"
+            placeholder={t("contact_email_placeholder")}
             sx={{
               "& .MuiOutlinedInput-root": {
                 transition: "all 0.4s ease",
@@ -118,7 +121,7 @@ const Contact = ({ formik }) => {
             htmlFor="message"
             sx={{ mb: 1, textAlign: "left" }}
           >
-            <span>Message *</span>
+            <span>{t("contact_message_label")} *</span>
             {/* error message*/}
             <span className="error-message">{formik.errors.message}</span>
           </Typography>
@@ -130,7 +133,7 @@ const Contact = ({ formik }) => {
             onBlur={formik.handleBlur}
             fullWidth
             className="contact-textfield"
-            placeholder="Your message..."
+            placeholder={t("contact_message_placeholder")}
             multiline
             rows={3}
             sx={{
@@ -166,7 +169,7 @@ const Contact = ({ formik }) => {
           disabled={formik.isSubmitting}
           className="contained-btn"
         >
-          {formik.isSubmitting ? "sending..." : "send"}
+          {formik.isSubmitting ? t("sending_button") : t("send_button")}
         </Button>
       </Box>
 

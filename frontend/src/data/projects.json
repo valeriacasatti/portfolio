@@ -3,9 +3,9 @@
     "id": 1,
     "url": "https://ecommerce-casatti.vercel.app/",
     "img": "/projects/ecommerce-react.png",
-    "title": "React E-commerce",
+    "title": "E-Commerce React",
     "technology": "React JS + Vite | Material UI",
-    "description": "An e-commerce app built with React and Material UI. Designed for a course project, it demonstrates core e-commerce functionalities."
+    "descriptionKey": "project1_description"
   },
   {
     "id": 2,
@@ -13,22 +13,22 @@
     "img": "/projects/WRA.png",
     "title": "WRA",
     "technology": "HTML + Bootstrap | PHP | Javascript | MySQL",
-    "description": "Innovative system designed to optimize and simplify technical assistance and remote maintenance monitoring of equipment efficiently."
+    "descriptionKey": "project2_description"
   },
   {
     "id": 3,
     "url": "https://proyecto-final-js-casatti.vercel.app/",
     "img": "/projects/ecommerce-js.png",
-    "title": "JS E-commerce",
+    "title": "E-Commerce JS",
     "technology": "Javascript",
-    "description": "A basic e-commerce interface built with vanilla JavaScript. This project simulates key features like a dynamic cart and product catalog."
+    "descriptionKey": "project3_description"
   },
   {
     "id": 4,
     "url": "https://proyecto-final-casatti-production.up.railway.app/",
     "img": "/projects/ecommerce-backend.png",
-    "title": "Backend E-commerce ",
+    "title": "E-Commerce Backend",
     "technology": "NodeJS | MongoDB | ExpressJS",
-    "description": "A backend for an e-commerce site using Node and MongoDB. Includes user auth, product APIs, and secure data handling for a full-stack app."
+    "descriptionKey": "project4_description"
   }
 ]

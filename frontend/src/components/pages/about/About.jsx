@@ -7,26 +7,19 @@ import Button from "../../common/button/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import { useTranslation } from "react-i18next";
 
 const About = ({ handleSendEmail }) => {
   const pink600 = pink[600];
+  const { t } = useTranslation();
 
   return (
     <Box mb="5rem" textAlign="center">
       <Container maxWidth="lg">
         <Typography variant="h2" mb={5}>
-          About
+          {t("about")}
         </Typography>
-        <Typography variant="body1">
-          I’m a passionate Full Stack Web Developer with a focus on creating
-          innovative and efficient web applications. With a solid foundation in
-          both frontend and backend development, I thrive in collaborative
-          environments where I can contribute to impactful projects. I have a
-          keen interest in continuous learning and am always exploring new
-          technologies to enhance my skill set. Currently, I’m focused on
-          expanding my expertise in React, JavaScript, and backend technologies
-          to build seamless and scalable web solutions.
-        </Typography>
+        <Typography variant="body1">{t("about_text")}</Typography>
       </Container>
 
       {/* contact info */}
@@ -48,7 +41,7 @@ const About = ({ handleSendEmail }) => {
       </Box>
 
       <Button onClick={handleSendEmail} className="contained-btn">
-        hire me
+        {t("hire_me")}
       </Button>
     </Box>
   );

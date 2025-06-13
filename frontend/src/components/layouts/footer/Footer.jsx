@@ -12,11 +12,13 @@ import MailIcon from "@mui/icons-material/Mail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { theme, toggleTheme } = useTheme();
   const pink600 = pink[600];
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
+  const { t } = useTranslation();
 
   return (
     <>
@@ -81,19 +83,19 @@ const Footer = () => {
               sx={{ height: "100%" }}
             >
               <Link to="home" smooth={true} duration={500}>
-                <Typography variant="body2">Home</Typography>
+                <Typography variant="body2">{t("home")}</Typography>
               </Link>
               <Link to="about" smooth={true} duration={500}>
-                <Typography variant="body2">About</Typography>
+                <Typography variant="body2">{t("about")}</Typography>
               </Link>
               <Link to="skills" smooth={true} duration={500}>
-                <Typography variant="body2">Skills</Typography>
+                <Typography variant="body2">{t("skills")}</Typography>
               </Link>
               <Link to="projects" smooth={true} duration={500}>
-                <Typography variant="body2">Projects</Typography>
+                <Typography variant="body2">{t("projects")}</Typography>
               </Link>
               <Link to="contact" smooth={true} duration={500}>
-                <Typography variant="body2">Contact</Typography>
+                <Typography variant="body2">{t("contact")}</Typography>
               </Link>
             </Box>
           </Grid2>
@@ -129,7 +131,7 @@ const Footer = () => {
         backgroundColor="rgba(255, 255, 255, 0.1)"
       >
         <Typography variant="caption" align="center" sx={{ marginTop: "2rem" }}>
-          © {new Date().getFullYear()} Valeria Casatti. All rights reserved.
+          Valeria Casatti © {new Date().getFullYear()} {t("rights")}
         </Typography>
       </Box>
     </>

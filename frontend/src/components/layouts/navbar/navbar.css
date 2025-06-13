@@ -18,12 +18,6 @@
   align-items: center;
 }
 
-.mobile-menu img {
-  height: 4rem;
-  width: 100%;
-  padding-bottom: 1rem;
-}
-
 .mobile-menu-list {
   text-align: center !important;
   text-transform: uppercase;

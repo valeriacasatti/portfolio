@@ -1,44 +1,23 @@
-import {
-  AppBar,
-  Box,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-  Toolbar,
-} from "@mui/material";
-
-import { Link } from "react-scroll";
-import { useState } from "react";
+import { AppBar, Box, Drawer, IconButton, List, Toolbar } from "@mui/material";
 import { useTheme } from "../../context/useTheme";
+import { useState } from "react";
+import ThemeToggleButton from "../../common/themeToggleButton/ThemeToggleButton";
+import NavLinksContainer from "../../common/navLinks/NavLinksContainer";
+import LanguageSelectorContainer from "../../common/languageSelector/LanguageSelectorContainer";
 import logo from "../../../assets/logo.svg";
-import { pink } from "@mui/material/colors";
-
-// iconos
 import MenuIcon from "@mui/icons-material/Menu";
-import LightModeTwoToneIcon from "@mui/icons-material/LightModeTwoTone";
-import DarkModeTwoToneIcon from "@mui/icons-material/DarkModeTwoTone";
-
 import "./navbar.css";
 
 const Navbar = () => {
+  // theme
   const { theme, toggleTheme } = useTheme();
-  const pink600 = pink[600];
 
+  // navbar mobile
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  const navLinks = [
-    { to: "home", label: "Home" },
-    { to: "about", label: "About" },
-    { to: "skills", label: "Skills" },
-    { to: "projects", label: "Projects" },
-    { to: "contact", label: "Contact" },
-  ];
 
   return (
     <AppBar
@@ -49,7 +28,6 @@ const Navbar = () => {
       }}
     >
       <Toolbar disableGutters className="toolbar">
-        {/* logo */}
         <img src={logo} alt="logo" />
 
         {/* desktop navbar */}
@@ -58,35 +36,13 @@ const Navbar = () => {
           sx={{ display: { xs: "none", lg: "flex" } }}
         >
           {/* nav items */}
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              smooth={true}
-              duration={500}
-              spy={true}
-              offset={-180}
-              activeClass="active"
-            >
-              {link.label}
-            </Link>
-          ))}
+          <NavLinksContainer />
 
           {/* theme button */}
-          <IconButton
-            onClick={toggleTheme}
-            sx={{
-              "&:hover": {
-                backgroundColor: "transparent",
-              },
-            }}
-          >
-            {theme.palette.mode === "light" ? (
-              <DarkModeTwoToneIcon sx={{ color: pink600 }} />
-            ) : (
-              <LightModeTwoToneIcon sx={{ color: pink600 }} />
-            )}
-          </IconButton>
+          <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
+
+          {/* language buttons */}
+          <LanguageSelectorContainer />
         </Box>
 
         {/* mobile menu button */}
@@ -122,47 +78,22 @@ const Navbar = () => {
           }}
         >
           <List>
-            {/* logo */}
             <img src={logo} alt="logo" />
 
-            {/* nav items */}
-            {navLinks.map((link) => (
-              <ListItem
-                key={link.to}
-                onClick={handleDrawerToggle}
-                className="mobile-menu-list"
-              >
-                <ListItemText>
-                  <Link
-                    to={link.to}
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    offset={-180}
-                    activeClass="active"
-                  >
-                    {link.label}
-                  </Link>
-                </ListItemText>
-              </ListItem>
-            ))}
+            {/* nav items mobile */}
+            <NavLinksContainer
+              isMobile={true}
+              handleClick={handleDrawerToggle}
+            />
 
-            {/* theme button */}
+            {/* theme button mobile */}
             <Box width="100%" marginTop="1rem" textAlign="center">
-              <IconButton
-                onClick={toggleTheme}
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "transparent",
-                  },
-                }}
-              >
-                {theme.palette.mode === "light" ? (
-                  <DarkModeTwoToneIcon sx={{ color: pink600 }} />
-                ) : (
-                  <LightModeTwoToneIcon sx={{ color: pink600 }} />
-                )}
-              </IconButton>
+              <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
+            </Box>
+
+            {/* language buttons mobile */}
+            <Box width="100%" marginTop="1rem" textAlign="center">
+              <LanguageSelectorContainer />
             </Box>
           </List>
         </Drawer>

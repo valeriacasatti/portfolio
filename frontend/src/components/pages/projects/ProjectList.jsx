@@ -9,12 +9,14 @@ import "swiper/css/pagination";
 
 import Project from "./Project";
 import "./projects.css";
+import { useTranslation } from "react-i18next";
 
 const ProjectList = ({ projects }) => {
+  const { t } = useTranslation();
   return (
     <Box mb="3rem" textAlign="center">
       <Typography variant="h2" mb={5}>
-        Projects
+        {t("projects")}
       </Typography>
 
       <Swiper

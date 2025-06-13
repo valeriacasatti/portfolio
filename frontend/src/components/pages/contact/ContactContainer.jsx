@@ -3,8 +3,11 @@ import * as Yup from "yup";
 import { toast } from "react-toastify";
 
 import Contact from "./Contact";
+import { useTranslation } from "react-i18next";
 
 const ContactContainer = () => {
+  const { t } = useTranslation();
+
   const formik = useFormik({
     // values
     initialValues: {
@@ -14,19 +17,19 @@ const ContactContainer = () => {
     },
     // validations
     validationSchema: Yup.object({
-      name: Yup.string().required("Please fill in your name"),
+      name: Yup.string().required(t("contact_name_alert")),
       email: Yup.string()
-        .email("Invalid email address")
-        .required("Please fill in your email"),
+        .email(t("contact_invalid_email"))
+        .required(t("contact_email_alert")),
       message: Yup.string()
-        .required("Please type a message")
-        .min(10, "Message should be at least 10 characters"),
+        .required(t("contact_message_alert"))
+        .min(10, t("contact_message_length")),
     }),
     // submit
     onSubmit: async (values, actions) => {
       // messages
-      const successMessage = "Email sent successfully";
-      const errorMessage = "Something went wrong. Please try again";
+      const successMessage = t("send_success");
+      const errorMessage = t("send_error");
       try {
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}/api/contact`,

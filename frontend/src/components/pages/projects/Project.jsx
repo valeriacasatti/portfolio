@@ -6,9 +6,11 @@ import { Box, Typography } from "@mui/material";
 import { useTheme } from "../../context/useTheme";
 
 import "./projects.css";
+import { useTranslation } from "react-i18next";
 
 const Project = ({ project }) => {
   const { theme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -47,7 +49,7 @@ const Project = ({ project }) => {
           </Typography>
 
           {/* description */}
-          <Typography variant="body1">{project.description}</Typography>
+          <Typography variant="body1">{t(project.descriptionKey)}</Typography>
         </CardContent>
       </Card>
     </Box>

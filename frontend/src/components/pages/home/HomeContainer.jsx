@@ -4,7 +4,7 @@ const HomeContainer = () => {
   // view CV
   const handleOpenCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1HhufSxW5p8dEQUTKweb3JOcFWlRnLz4C/view?usp=sharing"
+      "https://drive.google.com/file/d/1X7QyRKpvy_zBoO8iMamKo6094UQL230t/view?usp=drive_link"
     );
   };
 

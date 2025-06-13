@@ -15,9 +15,11 @@ import SkillsContainer from "../skills/SkillsContainer";
 import ProjectsContainer from "../projects/ProjectsContainer";
 import ContactContainer from "../contact/ContactContainer";
 import Footer from "../../layouts/footer/Footer";
+import { useTranslation } from "react-i18next";
 
 const Home = ({ handleOpenCV, handleSendEmail, emailURL }) => {
   const pink600 = pink[600];
+  const { t } = useTranslation();
 
   return (
     <>
@@ -25,26 +27,24 @@ const Home = ({ handleOpenCV, handleSendEmail, emailURL }) => {
         <Box mt="11rem" mb="5rem" textAlign="center">
           <Container maxWidth="lg">
             <Typography variant="h3" className="gradientText" mb={2}>
-              Hi there!
+              {t("hi_there")}
             </Typography>
-            <Typography variant="h2">I’m Valeria Casatti</Typography>
+            <Typography variant="h2">{t("greeting")}</Typography>
             <Typography variant="h1" className="gradientText">
-              Junior Full Stack Developer
+              {t("developer")}
             </Typography>
             <Typography variant="body1" mt={2}>
-              Passionate about advancing my expertise in web development, eager
-              to embark on a continuous learning journey and further
-              professionalize in the dynamic tech industry.
+              {t("home_text")}
             </Typography>
           </Container>
 
           {/* buttons */}
           <Box display="flex" justifyContent="center" mt={4} gap={4}>
             <Button onClick={handleOpenCV} className="contained-btn">
-              view cv
+              {t("view_cv")}
             </Button>
             <Button onClick={handleSendEmail} className="outlined-btn">
-              hire me
+              {t("hire_me")}
             </Button>
           </Box>
 
