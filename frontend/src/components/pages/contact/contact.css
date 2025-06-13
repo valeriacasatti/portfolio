@@ -45,3 +45,9 @@ input:-webkit-autofill:active {
   border-radius: 15px !important;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+@media (max-width: 999px) {
+  .contact-form {
+    max-width: 75%;
+  }
+}

@@ -15,7 +15,11 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   width: 50%;
   padding-top: 1rem;
-  align-items: center;
+  text-align: center;
+}
+
+.mobile-logo {
+  width: 50%;
 }
 
 .mobile-menu-list {
@@ -57,4 +61,10 @@
   background-color: #fff;
   color: #d81b60;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 999px) {
+  .mobile-menu {
+    width: 75%;
+  }
 }

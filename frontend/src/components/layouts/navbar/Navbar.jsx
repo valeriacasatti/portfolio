@@ -15,8 +15,12 @@ const Navbar = () => {
   // navbar mobile
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+  const handleDrawerOpen = () => {
+    setMobileOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setMobileOpen(false);
   };
 
   return (
@@ -47,7 +51,7 @@ const Navbar = () => {
 
         {/* mobile menu button */}
         <IconButton
-          onClick={handleDrawerToggle}
+          onClick={handleDrawerOpen}
           sx={{
             display: { xs: "block", lg: "none" },
             "&:hover": {
@@ -65,7 +69,7 @@ const Navbar = () => {
         <Drawer
           anchor="right"
           open={mobileOpen}
-          onClose={handleDrawerToggle}
+          onClose={handleDrawerClose}
           slotProps={{
             paper: {
               sx: {
@@ -78,12 +82,12 @@ const Navbar = () => {
           }}
         >
           <List>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" className="mobile-logo" />
 
             {/* nav items mobile */}
             <NavLinksContainer
               isMobile={true}
-              handleClick={handleDrawerToggle}
+              handleClose={handleDrawerClose}
             />
 
             {/* theme button mobile */}

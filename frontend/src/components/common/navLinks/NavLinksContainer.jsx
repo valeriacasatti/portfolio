@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import NavLinks from "./NavLinks";
 
-const NavLinksContainer = ({ isMobile = false, handleClick }) => {
+const NavLinksContainer = ({ isMobile = false, handleClose }) => {
   const { t } = useTranslation();
 
   const links = useMemo(
@@ -17,7 +17,7 @@ const NavLinksContainer = ({ isMobile = false, handleClick }) => {
     [t]
   );
   return (
-    <NavLinks handleClick={handleClick} links={links} isMobile={isMobile} />
+    <NavLinks handleClose={handleClose} links={links} isMobile={isMobile} />
   );
 };
 
