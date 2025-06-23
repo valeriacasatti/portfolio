@@ -5,7 +5,7 @@ export const lightTheme = createTheme({
     fontFamily: "M PLUS 2, sans-serif",
     h1: {
       fontWeight: 300,
-      fontSize: "3.5rem",
+      fontSize: "3.2rem",
     },
     h2: {
       fontWeight: 300,
@@ -46,7 +46,7 @@ export const darkTheme = createTheme({
     fontFamily: "M PLUS 2, sans-serif",
     h1: {
       fontWeight: 300,
-      fontSize: "3.5rem",
+      fontSize: "3.2rem",
     },
     h2: {
       fontWeight: 200,
