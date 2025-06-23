@@ -1,11 +1,20 @@
+import { useTranslation } from "react-i18next";
 import Home from "./Home";
 
 const HomeContainer = () => {
+  const { i18n } = useTranslation();
+
   // view CV
   const handleOpenCV = () => {
-    window.open(
-      "https://drive.google.com/file/d/1X7QyRKpvy_zBoO8iMamKo6094UQL230t/view?usp=drive_link"
-    );
+    if (i18n.language == "es") {
+      window.open(
+        "https://drive.google.com/file/d/1QfMgn0wU4YMG1Bnzff94UUQtdPJI_5PA/view?usp=sharing"
+      );
+    } else {
+      window.open(
+        "https://drive.google.com/file/d/1wgqARDd2OxKtHakEKtN4zzCGkFs7HwPS/view?usp=sharing"
+      );
+    }
   };
 
   // send email
